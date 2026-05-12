@@ -15,6 +15,7 @@ public class Wallpaper {
 $homePath = [Environment]::GetFolderPath("UserProfile")
 $imagePath = Join-Path $homePath $FileName
 
+$ProgressPreference = 'SilentlyContinue'
 Invoke-WebRequest -Uri $ImageUrl -OutFile $imagePath
 
 [Wallpaper]::SystemParametersInfo(20, 0, $imagePath, 3) | Out-Null
