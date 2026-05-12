@@ -1,10 +1,12 @@
 #include <DigiMouse.h>
 
-void setup() {        
+void setup()
+{
   DigiMouse.begin();
 }
 
-void loop() {
+void loop()
+{
   DigiMouse.delay(3000);
   DigiMouse.moveX(10);
   DigiMouse.delay(50);

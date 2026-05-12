@@ -1,6 +1,7 @@
 #include <DigiKeyboard.h>
 
-void setup() {        
+void setup()
+{
   DigiKeyboard.update();
 
   /*
@@ -11,7 +12,12 @@ void setup() {
   */
 
   DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
-  DigiKeyboard.println("cmd /c start /min "" powershell -NoP -Win H -Noni -Exec Bypass; Start-Sleep -Seconds 5; notepad.exe");
+  DigiKeyboard.println("cmd /c start /min "
+                       " powershell -NoP -Win H -Noni -Exec Bypass; Start-Sleep -Seconds 5; notepad.exe");
 }
 
-void loop() {;;}
+void loop()
+{
+  ;
+  ;
+}

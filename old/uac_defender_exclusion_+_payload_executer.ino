@@ -2,12 +2,13 @@
 #include <DigiKeyboardDe.h>
 
 // the setup routine runs once
-void setup() {
+void setup()
+{
   DigiKeyboard.update();
-  
+
   // initialize the digital pin as an output.
-  pinMode(0, OUTPUT); //LED on Model B
-  pinMode(1, OUTPUT); //LED on Model A
+  pinMode(0, OUTPUT); // LED on Model B
+  pinMode(1, OUTPUT); // LED on Model A
 
   // opening run box
   DigiKeyboardDe.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
@@ -36,11 +37,12 @@ void setup() {
 }
 
 // the loop routine runs over and over again forever:
-void loop() {
-  digitalWrite(0, HIGH);  // turn the LED on (HIGH is the voltage level)
+void loop()
+{
+  digitalWrite(0, HIGH); // turn the LED on (HIGH is the voltage level)
   digitalWrite(1, HIGH);
-  delay(100);             // wait for a second
-  digitalWrite(0, LOW);   // turn the LED off by making the voltage LOW
-  digitalWrite(1, LOW); 
-  delay(100);             // wait for a second
+  delay(100);           // wait for a second
+  digitalWrite(0, LOW); // turn the LED off by making the voltage LOW
+  digitalWrite(1, LOW);
+  delay(100); // wait for a second
 }

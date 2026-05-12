@@ -1,0 +1,1 @@
+https://github.com/ArminJo/DigistumpArduino/tree/master/digistump-avr/libraries
