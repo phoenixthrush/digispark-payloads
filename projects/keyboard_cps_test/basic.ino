@@ -5,7 +5,7 @@ void setup()
 {
     DigiKeyboard.sendKeyStroke(0);
 
-    for (;;)
+    while (true)
     {
         DigiKeyboard.sendKeyStroke(KEY_SPACE);
     }

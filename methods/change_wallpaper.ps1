@@ -1,3 +1,5 @@
+# does not require admin privileges
+
 param(
     [string]$ImageUrl,
     [string]$FileName = "wallpaper.jpg"

