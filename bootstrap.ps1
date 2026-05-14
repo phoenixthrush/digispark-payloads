@@ -6,11 +6,16 @@ param(
 $repoBase = "https://raw.githubusercontent.com/phoenixthrush/digispark-payloads/refs/heads/main"
 
 $methods = @{
-    1 = @{
-        Script = "$repoBase/methods/change_wallpaper.ps1"
+    0 = @{
+        Script = "$repoBase/methods/wallpaper_change.ps1"
         Args   = @(
             "$repoBase/assets/images/chungus.jpeg"
         )
+    }
+
+    1 = @{
+        Script = "$repoBase/methods/notepad_message.ps1"
+        Args   = @()
     }
 }
 

